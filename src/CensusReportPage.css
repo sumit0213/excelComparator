@@ -1,0 +1,194 @@
+/* Main container styling */
+.census-report-page {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    transition: all 0.3s ease;
+    overflow-x: auto; /* Ensure table doesn't overflow horizontally */
+}
+
+/* Header section styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #00796b;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.header button {
+    background-color: transparent;
+    color: #00796b;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: 2px solid #00796b;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header button:hover {
+    background-color: #00796b;
+    color: white;
+    transform: scale(1.1);
+}
+
+.header button:active {
+    transform: scale(0.95);
+}
+
+/* Tab section styling */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    margin: 0 15px;
+}
+
+.tab:hover {
+    color: #00796b;
+}
+
+.tab.active {
+    color: #00796b;
+    font-weight: bold;
+    border-bottom: 2px solid #00796b;
+}
+
+.tab:not(.active):hover {
+    border-bottom: 2px solid #b2dfdb;
+}
+
+/* Data Table styling */
+.data-table {
+    width: 100%;
+    max-width: 100%; /* Prevent the table from exceeding container */
+    table-layout: auto; /* Default auto layout to avoid content overflow */
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th,
+.data-table td {
+    padding: 14px 20px;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    word-wrap: break-word; /* Ensure long words or text break properly */
+}
+
+.data-table th {
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #e0f2f1;
+}
+
+.data-table tr:hover {
+    background-color: #b2dfdb;
+    transition: background-color 0.3s ease;
+}
+
+.data-table td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Ensure the table remains within its container */
+.data-display {
+    overflow-x: auto;
+    margin: 0 -40px; /* Offset the padding of the main container to ensure the table fits */
+}
+
+/* Section title styling */
+.data-table h2 {
+    font-size: 1.8rem;
+    color: #004d40;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .tab {
+        font-size: 0.9rem;
+        margin: 0 10px;
+    }
+
+    .data-table th,
+    .data-table td {
+        font-size: 0.9rem;
+    }
+
+    .data-display {
+        margin: 0 -20px; /* Ensure table doesn't overflow horizontally on smaller screens */
+    }
+}
+/* Action buttons styling */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #00796b;
+  border: 2px solid #00796b;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #00796b;
+  color: white;
+}
+
+.icon-button svg {
+  margin-right: 8px;
+}

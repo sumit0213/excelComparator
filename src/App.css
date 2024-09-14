@@ -1,38 +1,203 @@
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.census-report-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  color: #333;
+}
+
+.add-access-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.blue-buttons,
+.orange-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: #2196f3;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-button:hover {
+  background-color: #1976d2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-rdr-button,
+.main-rdrwdr-button,
+.compare-button {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-rdr-button:hover,
+.main-rdrwdr-button:hover,
+.compare-button:hover {
+  background-color: #e68900;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #555;
+}
+
+.compare-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.data-display {
+  margin-top: 20px;
+  text-align: left;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.data-display pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}
+
+.observations {
+  margin-top: 20px;
+}
+
+.observations ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.observations li {
+  margin-bottom: 5px;
+}
+
+.updated-files {
+  margin-top: 20px;
+}
+
+.updated-files ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.updated-files li {
+  margin-bottom: 5px;
+}
+
+.mismatch-highlight {
+  background-color: #ffcccc; /* Light red background for mismatched rows */
+}
+
+/* Tab styling */
+.MuiTabs-root {
+  margin-top: 20px;
+}
+
+.MuiTab-root {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+.MuiTab-root.Mui-selected {
+  color: #2196f3; /* Color for selected tab */
+}
+
+.MuiTabs-indicator {
+  background-color: #2196f3;
+}
+
+/* Tab panel content */
+.MuiBox-root {
+  margin-top: 20px;
+}
+
+/* Adjustments to overall table formatting */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tr.mismatch-highlight {
+  background-color: #ffcccc; /* Red background for mismatched rows */
 }

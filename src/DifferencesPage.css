@@ -1,0 +1,15 @@
+.icon-button-container {
+    display: flex;
+    justify-content: flex-end; /* Align the buttons to the right */
+    margin-right: 50px; /* Add space from the right */
+    margin-top: -10px; /* Adjust the top margin for placement under "Data Differences" */
+  }
+  .census-report-page {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
